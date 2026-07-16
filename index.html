@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
+    <!-- Swiper CSS (Modern Slider İçin) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <!-- CSS Dosyası -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,9 +25,9 @@
             <a href="#" class="logo">Fatoş <span>Art & Gifts</span></a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#about">Our Story</a></li>
-                    <li><a href="#collections">Collections</a></li>
                     <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#about">Our Story</a></li>
                     <li><a href="#visit">Visit Us</a></li>
                 </ul>
             </nav>
@@ -45,20 +48,75 @@
             </div>
         </section>
 
-        <!-- Hakkımızda Bölümü -->
-        <section id="about" class="section-padding">
-            <div class="container about-container">
-                <div class="about-text reveal">
-                    <h2 class="section-title">A Hidden Gem in Adana</h2>
-                    <p class="subtitle">Located directly across from the Incirlik Air Base Main Gate.</p>
-                    <p>Fatoş Art & Gifts is more than just a store; it is a sanctuary of culture. Surrounded by our signature Turkish Blue walls, every item you see holds a story. From hand-woven kilims to meticulously crafted mosaic lamps, we offer timeless pieces that transform a house into a home.</p>
-                    <p>Whether you are searching for a historical artifact, an original canvas painting, or custom-designed epoxy furniture, you will find true masterpieces that transcend the ordinary.</p>
+        <!-- İnteraktif Galeri (Hero'nun hemen altına taşındı ve Swiper eklendi) -->
+        <section id="gallery" class="section-padding bg-darker">
+            <div class="container" style="overflow: hidden;">
+                <h2 class="section-title text-center reveal">The Gallery Experience</h2>
+                <p class="subtitle text-center reveal" style="margin-bottom: 40px; color: var(--text-muted);">Swipe to explore our exclusive artifacts</p>
+                
+                <!-- Swiper Ana Konteyner -->
+                <div class="swiper gallery-swiper reveal">
+                    <div class="swiper-wrapper">
+                        
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide gallery-item">
+                            <img src="images/IMG_6669.png" alt="Custom Epoxy Table">
+                            <div class="item-overlay">
+                                <h4>Wood & Epoxy</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide gallery-item">
+                            <img src="images/IMG_6685.png" alt="Original Canvas Painting">
+                            <div class="item-overlay">
+                                <h4>Canvas Arts</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide gallery-item">
+                            <img src="images/IMG_6631.png" alt="Turkish Mosaic Lamps">
+                            <div class="item-overlay">
+                                <h4>Mosaic Lighting</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide gallery-item">
+                            <img src="images/IMG_6637.png" alt="Handcrafted Chess Sets">
+                            <div class="item-overlay">
+                                <h4>Collectible Chess</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide gallery-item">
+                            <img src="images/IMG_6699.png" alt="Antique Leather Journals">
+                            <div class="item-overlay">
+                                <h4>Leather Journals</h4>
+                            </div>
+                        </div>
+
+                        <!-- Slide 6 -->
+                        <div class="swiper-slide gallery-item">
+                            <img src="images/IMG_6615.png" alt="Gallery Interior Artifacts">
+                            <div class="item-overlay">
+                                <h4>Historical Antiques</h4>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Swiper Kontrolleri -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </section>
 
         <!-- Koleksiyonlar (Öne Çıkan Kategoriler) -->
-        <section id="collections" class="section-padding bg-darker">
+        <section id="collections" class="section-padding">
             <div class="container">
                 <h2 class="section-title text-center reveal">Our Exclusive Collections</h2>
                 <div class="features-grid">
@@ -78,57 +136,18 @@
             </div>
         </section>
 
-        <!-- İnteraktif Galeri -->
-        <section id="gallery" class="section-padding">
-            <div class="container">
-                <h2 class="section-title text-center reveal">The Gallery Experience</h2>
-                <div class="gallery-grid">
-                    
-                    <div class="gallery-item reveal">
-                        <img src="images/IMG_6669.png" alt="Custom Epoxy Table">
-                        <div class="item-overlay">
-                            <h4>Wood & Epoxy</h4>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item reveal">
-                        <img src="images/IMG_6685.png" alt="Original Canvas Painting">
-                        <div class="item-overlay">
-                            <h4>Canvas Arts</h4>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item reveal">
-                        <img src="images/IMG_6631.png" alt="Turkish Mosaic Lamps">
-                        <div class="item-overlay">
-                            <h4>Mosaic Lighting</h4>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item reveal">
-                        <img src="images/IMG_6637.png" alt="Handcrafted Chess Sets">
-                        <div class="item-overlay">
-                            <h4>Collectible Chess</h4>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item reveal">
-                        <img src="images/IMG_6699.png" alt="Antique Leather Journals">
-                        <div class="item-overlay">
-                            <h4>Leather Journals</h4>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item reveal">
-                        <img src="images/IMG_6615.png" alt="Gallery Interior Artifacts">
-                        <div class="item-overlay">
-                            <h4>Historical Antiques</h4>
-                        </div>
-                    </div>
-
+        <!-- Hakkımızda Bölümü -->
+        <section id="about" class="section-padding bg-darker">
+            <div class="container about-container">
+                <div class="about-text reveal text-center">
+                    <h2 class="section-title">A Hidden Gem in Adana</h2>
+                    <p class="subtitle" style="margin-bottom: 20px; color: var(--gold-accent);">Located directly across from the Incirlik Air Base Main Gate.</p>
+                    <p style="max-width: 800px; margin: 0 auto 15px auto;">Fatoş Art & Gifts is more than just a store; it is a sanctuary of culture. Surrounded by our signature Turkish Blue walls, every item you see holds a story. From hand-woven kilims to meticulously crafted mosaic lamps, we offer timeless pieces that transform a house into a home.</p>
+                    <p style="max-width: 800px; margin: 0 auto;">Whether you are searching for a historical artifact, an original canvas painting, or custom-designed epoxy furniture, you will find true masterpieces that transcend the ordinary.</p>
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- Footer / Ziyaret Bilgileri -->
@@ -155,7 +174,10 @@
         <img class="lightbox-content" id="lightbox-img">
     </div>
 
-    <!-- JavaScript Dosyası -->
+    <!-- Swiper JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Kendi JS Dosyamız -->
     <script src="js/main.js"></script>
 </body>
 </html>

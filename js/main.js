@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const reveals = document.querySelectorAll('.reveal');
     const revealOnScroll = () => {
         const windowHeight = window.innerHeight;
-        const elementVisible = 100; // Element 100px göründüğünde tetikle
+        const elementVisible = 100;
 
         reveals.forEach((reveal) => {
             const elementTop = reveal.getBoundingClientRect().top;
@@ -23,37 +23,59 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     };
-    
-    // Sayfa yüklendiğinde ve scroll edildiğinde kontrol et
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll();
 
-    // 3. Lightbox (Galeri Büyüteç Sistemi)
+    // 3. SWIPER (KAYDIRMALI GALERİ) İNİTİALİZASYONU
+    const swiper = new Swiper('.gallery-swiper', {
+        effect: 'coverflow', // 3 Boyutlu modern görünüm
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        loop: true, // Sonsuz dönme
+        coverflowEffect: {
+            rotate: 25,     // Slaytların dönme açısı
+            stretch: 0,
+            depth: 250,     // Arkadaki slaytların derinliği
+            modifier: 1,
+            slideShadows: true, // 3D gölgeler
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        // Mobilde swipe hissini artırmak için
+        speed: 600
+    });
+
+    // 4. Lightbox (Galeri Büyüteç Sistemi)
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.querySelector('.close-lightbox');
-    const galleryItems = document.querySelectorAll('.gallery-item img');
+    const galleryImages = document.querySelectorAll('.gallery-item img');
 
-    // Görsellere tıklandığında lightbox'ı aç
-    galleryItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            lightbox.classList.add('active');
-            lightboxImg.src = e.target.src; // Tıklanan görselin kaynağını modal'a aktar
-            document.body.style.overflow = 'hidden'; // Arka plan kaydırmasını kapat
+    galleryImages.forEach(img => {
+        img.addEventListener('click', (e) => {
+            // Sadece aktif slayta (ortadaki) tıklanınca lightbox açılsın
+            const slide = e.target.closest('.swiper-slide');
+            if(slide.classList.contains('swiper-slide-active')) {
+                lightbox.classList.add('active');
+                lightboxImg.src = e.target.src; 
+                document.body.style.overflow = 'hidden'; 
+            }
         });
     });
 
-    // Kapatma butonuna tıklandığında lightbox'ı kapat
     closeBtn.addEventListener('click', closeLightbox);
-
-    // Lightbox'ın dışına (siyah alana) tıklandığında kapat
     lightbox.addEventListener('click', (e) => {
         if (e.target !== lightboxImg) {
             closeLightbox();
         }
     });
-
-    // ESC tuşu ile kapatma
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && lightbox.classList.contains('active')) {
             closeLightbox();
@@ -62,6 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function closeLightbox() {
         lightbox.classList.remove('active');
-        document.body.style.overflow = 'auto'; // Arka plan kaydırmasını geri aç
+        document.body.style.overflow = 'auto'; 
     }
 });
