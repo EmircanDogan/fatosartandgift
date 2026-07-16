@@ -11,8 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
-    <!-- Swiper CSS (Modern Slider İçin) -->
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- FontAwesome (Instagram Logosu İçin) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- CSS Dosyası -->
     <link rel="stylesheet" href="css/style.css">
@@ -48,17 +51,15 @@
             </div>
         </section>
 
-        <!-- İnteraktif Galeri (Hero'nun hemen altına taşındı ve Swiper eklendi) -->
-        <section id="gallery" class="section-padding bg-darker">
+        <!-- İnteraktif Galeri -->
+        <section id="gallery" class="section-padding bg-light">
             <div class="container" style="overflow: hidden;">
                 <h2 class="section-title text-center reveal">The Gallery Experience</h2>
                 <p class="subtitle text-center reveal" style="margin-bottom: 40px; color: var(--text-muted);">Swipe to explore our exclusive artifacts</p>
                 
-                <!-- Swiper Ana Konteyner -->
                 <div class="swiper gallery-swiper reveal">
                     <div class="swiper-wrapper">
                         
-                        <!-- Slide 1 -->
                         <div class="swiper-slide gallery-item">
                             <img src="images/IMG_6669.png" alt="Custom Epoxy Table">
                             <div class="item-overlay">
@@ -66,7 +67,6 @@
                             </div>
                         </div>
 
-                        <!-- Slide 2 -->
                         <div class="swiper-slide gallery-item">
                             <img src="images/IMG_6685.png" alt="Original Canvas Painting">
                             <div class="item-overlay">
@@ -74,7 +74,6 @@
                             </div>
                         </div>
 
-                        <!-- Slide 3 -->
                         <div class="swiper-slide gallery-item">
                             <img src="images/IMG_6631.png" alt="Turkish Mosaic Lamps">
                             <div class="item-overlay">
@@ -82,7 +81,6 @@
                             </div>
                         </div>
 
-                        <!-- Slide 4 -->
                         <div class="swiper-slide gallery-item">
                             <img src="images/IMG_6637.png" alt="Handcrafted Chess Sets">
                             <div class="item-overlay">
@@ -90,7 +88,6 @@
                             </div>
                         </div>
 
-                        <!-- Slide 5 -->
                         <div class="swiper-slide gallery-item">
                             <img src="images/IMG_6699.png" alt="Antique Leather Journals">
                             <div class="item-overlay">
@@ -98,7 +95,6 @@
                             </div>
                         </div>
 
-                        <!-- Slide 6 -->
                         <div class="swiper-slide gallery-item">
                             <img src="images/IMG_6615.png" alt="Gallery Interior Artifacts">
                             <div class="item-overlay">
@@ -107,7 +103,6 @@
                         </div>
 
                     </div>
-                    <!-- Swiper Kontrolleri -->
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
@@ -116,50 +111,65 @@
         </section>
 
         <!-- Koleksiyonlar (Öne Çıkan Kategoriler) -->
-        <section id="collections" class="section-padding">
+        <section id="collections" class="section-padding bg-white">
             <div class="container">
                 <h2 class="section-title text-center reveal">Our Exclusive Collections</h2>
                 <div class="features-grid">
                     <div class="feature-card reveal">
+                        <i class="fa-solid fa-tree feature-icon"></i>
                         <h3>Custom Epoxy Furniture</h3>
-                        <p>Hand-crafted tables combining the raw beauty of natural wood with vibrant epoxy resin.</p>
+                        <p>Hand-crafted tables combining the raw beauty of natural Anatolian wood with vibrant, modern epoxy resin details.</p>
                     </div>
                     <div class="feature-card reveal">
+                        <i class="fa-solid fa-palette feature-icon"></i>
                         <h3>Timeless Canvas Art</h3>
-                        <p>Original paintings reflecting historical themes, culture, and pure artistic expression.</p>
+                        <p>Original paintings reflecting historical themes, profound culture, and pure artistic expression from talented hands.</p>
                     </div>
                     <div class="feature-card reveal">
+                        <i class="fa-solid fa-chess-knight feature-icon"></i>
                         <h3>Authentic Antiques</h3>
-                        <p>A hand-picked selection of historical copperware, traditional ceramics, and artifacts.</p>
+                        <p>A hand-picked selection of historical copperware, traditional ceramics, mosaic lamps, and timeless artifacts.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Hakkımızda Bölümü -->
-        <section id="about" class="section-padding bg-darker">
+        <!-- Genişletilmiş Hakkımızda Bölümü -->
+        <section id="about" class="section-padding bg-light">
             <div class="container about-container">
                 <div class="about-text reveal text-center">
-                    <h2 class="section-title">A Hidden Gem in Adana</h2>
-                    <p class="subtitle" style="margin-bottom: 20px; color: var(--gold-accent);">Located directly across from the Incirlik Air Base Main Gate.</p>
-                    <p style="max-width: 800px; margin: 0 auto 15px auto;">Fatoş Art & Gifts is more than just a store; it is a sanctuary of culture. Surrounded by our signature Turkish Blue walls, every item you see holds a story. From hand-woven kilims to meticulously crafted mosaic lamps, we offer timeless pieces that transform a house into a home.</p>
-                    <p style="max-width: 800px; margin: 0 auto;">Whether you are searching for a historical artifact, an original canvas painting, or custom-designed epoxy furniture, you will find true masterpieces that transcend the ordinary.</p>
+                    <h2 class="section-title">Our Story</h2>
+                    <p class="subtitle" style="margin-bottom: 25px; color: var(--turkish-blue); font-weight: 500;">A Cultural Bridge in the Heart of Adana</p>
+                    
+                    <div class="about-paragraphs">
+                        <p>Founded by Fatoş, this gallery is not just a store—it is a labor of love and a sanctuary for those who appreciate true craftsmanship. For years, Fatoş Art & Gifts has proudly stood directly across from the Incirlik Air Base Main Gate, serving as a vibrant bridge between deep Anatolian heritage and art enthusiasts from all around the world.</p>
+                        
+                        <p>Surrounded by our signature Turkish Blue walls, every single piece you find here has a soul and a story. From meticulously hand-woven kilims and warm mosaic lamps to our exclusive, custom-designed epoxy furniture, we ensure that you are not just taking home a souvenir, but a timeless piece of history.</p>
+                        
+                        <p>We invite you to step inside, enjoy a cup of traditional Turkish tea, and discover the hidden treasures that transcend the ordinary.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer / Ziyaret Bilgileri -->
+    <!-- Footer / Ziyaret Bilgileri ve Sosyal Medya -->
     <footer id="visit">
         <div class="container footer-container reveal">
-            <div class="footer-info">
+            <div class="footer-brand">
                 <h2>Fatoş Art & Gifts</h2>
                 <p>Your destination for authentic art and timeless souvenirs.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/fatosartgallery/" target="_blank" rel="noopener noreferrer" class="social-btn">
+                        <i class="fa-brands fa-instagram"></i> Follow us on Instagram
+                    </a>
+                </div>
             </div>
+            
             <div class="footer-contact">
                 <h3>Visit Us</h3>
-                <p>Directly across from Incirlik Air Base Main Gate</p>
+                <p><i class="fa-solid fa-location-dot"></i> Directly across from Incirlik Air Base Main Gate</p>
                 <p>Adana, Türkiye</p>
             </div>
         </div>
@@ -168,7 +178,7 @@
         </div>
     </footer>
 
-    <!-- Lightbox (Büyüteç Modalı) -->
+    <!-- Lightbox -->
     <div id="lightbox" class="lightbox">
         <span class="close-lightbox">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
